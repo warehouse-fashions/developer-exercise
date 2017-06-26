@@ -92,7 +92,7 @@ a:visited {
 }
 
 .recommendations__item-link:hover::after {
-   content:"View Product Details";
+   content:"View Details";
    display:flex;
    justify-content: center;
    align-items: center;
