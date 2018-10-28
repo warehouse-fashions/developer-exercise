@@ -1,0 +1,23 @@
+// ==========================================================================
+// Extend classes
+// ==========================================================================
+
+// Headlines
+
+%hdln-prim {
+	margin-top : 0;
+	font-size  : 1.296em;
+	color      : palette(grey, x-dark);
+	font-weight: $font-weight--light;
+}
+
+%hdln-sec {
+	font-size     : 1.215em;
+	font-family   : $font-family--secondary;
+	color         : palette(black, light);
+	letter-spacing: $letter-space;
+	font-weight   : $font-weight--thin;
+}
+
+
+

@@ -1,0 +1,81 @@
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+  color: palette(grey);
+  font-size: $base__font-size;
+  font-family: $font-family--primary;
+  line-height: ($base__line/$base__font-size);
+  margin: 0;
+}
+
+// Text
+
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  line-height: 1.2;
+}
+
+h1 {
+  @extend %hdln-prim;
+}
+
+h2 {
+	@extend %hdln-sec;
+}
+
+h3 {font-size: 1.138em;}
+
+h4 {font-size: 1.067em;}
+
+small, 
+.font_small {
+  font-size: 0.937em;
+  margin: em(5px) 0 0 0;
+  color: palette(black, dark);
+  @include mq(medium) {
+    font-size: 0.8em;
+  }
+  @include mq(large) {
+    font-size: 0.78em;
+  }
+}
+
+a {
+	color: palette(grey, dark); 
+	text-decoration: none;
+	font-weight: $font-weight--medium;
+}
+
+p {
+	margin-bottom: 1em;
+	font-weight: $font-weight--light;
+}
+
+// Lists
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+img {
+	width: 100%;
+}
+
+
+

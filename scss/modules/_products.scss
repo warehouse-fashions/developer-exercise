@@ -1,0 +1,64 @@
+// ==========================================================================
+// Products
+// ==========================================================================
+
+/*Products container */
+.products {
+	margin-top: em(10px);
+}
+
+/*Product wrapper block */
+.product-wrapper {
+	@extend %clearfix;
+	@extend %flexy;
+	-webkit-flex-wrap: wrap; 
+	-moz-flex-wrap   : wrap;
+	-ms-flex-wrap    : wrap; 
+	flex-wrap        : wrap; 
+	justify-content  : space-evenly;
+	@include e(item) {
+		/*background: green;*/
+		@extend %flexy;
+		position     : relative; 
+		float        : left; 
+		margin-bottom: em(15px);
+		@include mq(small) {
+			display: block;
+			width  :100%;
+			float  :none;
+		}
+		@include mq(medium){
+    		width: calc(95% / 2); 
+    	}
+    	@include mq(large) {
+			float        : none;
+			margin-bottom: 0;
+			flex         : 1;
+			margin-right : em(8px);
+
+    	}
+    	@include e(img) {
+			transition: transform .5s;
+			&:hover {
+				transform: scale(1.1);
+				overflow : hidden;
+			}
+    	}
+    	&:last-of-type {
+			@include mq(large) {
+				margin-right: 0;
+			}
+    	}
+    	&:hover {
+			.product-overlay {
+				opacity: 1;
+			}
+		}
+	}
+	@include mq(large) {
+		-webkit-flex-wrap: nowrap; 
+		-ms-flex-wrap    : nowrap; 
+		flex-wrap        : nowrap;
+		padding: 0 em(10px);
+	}
+}
