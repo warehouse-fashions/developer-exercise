@@ -1,0 +1,13 @@
+// ==========================================================================
+// Product Overlay
+// ==========================================================================
+
+.product-overlay {
+	opacity   : 0;
+	transition: opacity .5s;
+	position  : absolute;
+	top       : 0;
+	background: rgba($white, .9);
+	width     : 100%;
+	padding   : em(10px) 0;
+}

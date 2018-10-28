@@ -1,0 +1,24 @@
+// ==========================================================================
+// Headlines
+// ==========================================================================
+
+.headline {
+	&-primary {
+		@extend %hdln-prim;
+	}
+	&-secondary {
+		@extend %hdln-sec;
+		font-weight: $font-weight--bold;
+		@include mq(small) {
+			font-size: .8em;
+		}
+		@include mq(large) {
+			font-size: 1em;
+		}
+	}
+}
+
+.suggestion-headline {
+	padding      : .7em 0;
+	border-bottom: 1px solid palette(grey);
+}

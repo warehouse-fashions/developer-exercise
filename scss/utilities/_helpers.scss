@@ -1,0 +1,37 @@
+// ==========================================================================
+// Helpers
+// ==========================================================================
+
+// Clearfix
+
+%clearfix {
+  &:after {
+	content: "";
+	display: table;
+	clear  : both;
+  }
+}
+
+// For pseudo-elements
+
+%pseudos {
+	display : block;
+	content : ''; 
+	position: absolute;
+}
+
+// Flexy
+
+%flexy {
+	display: -webkit-flex; 
+	display: -ms-flexbox;
+	display: -moz-box; 
+	display: flex; 
+
+}
+
+// Center elements
+
+.centered {
+	text-align: center;
+}

@@ -1,0 +1,17 @@
+// ==========================================================================
+// Container
+// ==========================================================================
+
+/*container to algin blocks to center*/
+.container {
+  max-width : em($max-width);
+  margin    : 0 auto;
+  text-align: left;
+  overflow  : hidden;
+   @include mq(small) {
+    	text-align: center;
+	}
+}
+
+
+
