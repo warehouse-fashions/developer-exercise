@@ -9,3 +9,7 @@ In this excercise we would like you to build a web component similar to this [sc
 Please fork this repository and commit your changes for review.
 
 Amend this Readme in your forked repo and use your commits to outline the component you have created and the decisions that you have made.
+
+### about Project
+
+ I had a bit of confusion to understand requirement. you want me to pick the data only from the objects which have "image" key or i can pick up data from each object and show other image if its not available? I used a product image(downloaded from a link given in JSON file) for those products which doesnt have any "image" object in JSON file inplace of keeping placeholder image. I am not sure this is what you want me to do.
