@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "local-web-server": "^2.6.0"
+  }
+}
