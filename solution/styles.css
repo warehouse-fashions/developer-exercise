@@ -1,0 +1,28 @@
+body {
+   font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.recommendations-title {
+  font-weight: bold;
+}
+
+.card {
+  border-style: none;
+  margin-bottom: 8px;
+  max-width: 280px;
+}
+
+.card-body a {
+  color: black;
+  font-weight: bold;
+}
+
+.card h6 {
+  font-size: 12px;
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+.card h5 {
+  font-size: 12px;
+}
