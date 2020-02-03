@@ -1,11 +1,10 @@
-# Warehouse Web Developer Exercise
+# Warehouse Web Developer Exercise - Ashna Shah
 
-In this excercise we would like you to build a web component similar to this [screenshot](recommendation_screenshot.png) using the [JSON](data/recommendations.json) provided. Creativity is accepted but do not alter the JSON. The component you build should display images, prices and link to the product taking into consideration how it would work with i18n.
-
-### Requirements
-* Responsive
-* Reusable code
-
-Please fork this repository and commit your changes for review.
-
-Amend this Readme in your forked repo and use your commits to outline the component you have created and the decisions that you have made.
+- I saved the recommendations.json file to a JavaScript object in the data.js. Initially I wanted to parse recommendations.json, however I had issues trying to do this to a local file.
+- I created the html file and decided it would be best to use bootstrap grids and cards as it was easy to achieve responsivity.
+- After playing around I decided how many recommendation cards I wanted to show in each row at different screen-sizes to achieve optimum user-experience and set the column widths accordingly.
+- I added a dummy recommendation card to the column so that I could add the required information dynamically
+- I created a JS function that would dynamically add the required fields to a cloned version of the dummy card and append it to the responsive grid.
+- I realised that some recommendations did not have images, hence I decided to use an if statement in my function to filter out those recommendations.
+- Although I have linked the recommendation title to the product page, I noticed that all of the links provided in the json file are broken/outdated
+- I then tweaked the styling by adding bootstrap classes as well as custom classes in styles.css to achieve a neat and uniform look.

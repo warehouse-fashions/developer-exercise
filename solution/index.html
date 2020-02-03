@@ -1,0 +1,65 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Warehouse</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- import json data which has been saved to a js object for easy access -->
+  <script src="data.js"></script>
+  <!-- end of data.js file import -->
+  <h6 class="text-center mt-3 mb-4 border-bottom recommendations-title">IF YOU LIKE THIS, YOU MIGHT BE INTO THESE</h6>
+  <div class="container d-flex justify-content-center">
+    <!-- start of responsive grid -->
+    <div class="row" id="row">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" id="col">
+        <!-- start of recommendation card -->
+        <div class="card " id="card">
+          <img class="card-img-top shadow" src="" alt="Card image cap" id="image">
+          <div class="card-body p-0 pt-2">
+            <a href="" id="link">
+              <h6 class="title" id="title"></h6>
+            </a>
+            <h5 id="price">£ </h5>
+          </div>
+        </div>
+        <!-- end of recommendation card -->
+      </div>
+    </div>
+    <!-- end of responsive grid -->
+  </div>
+  <script>
+    // dynamically input data from json file into recommendation cards
+    let counter = 0;
+    (data.hits).forEach(function (item) {
+      // if statement filters out items without image
+      if (Object.keys(item).includes("image")) {
+        counter += 1
+        var card = document.getElementById('card');
+        var newCard = card.cloneNode(true);
+        var col = document.getElementById('col');
+        var newCol = col.cloneNode(false);
+        newCard.id += `${counter}`;
+        console.log(newCard);
+        document.getElementById('row').appendChild(newCol).appendChild(newCard);
+        document.getElementById(`card${counter}`).querySelector('h6').innerHTML = item["product_name"];
+        document.getElementById(`card${counter}`).querySelector('a').href = item["link"];
+        document.getElementById(`card${counter}`).querySelector('img').src = item["image"]["link"];
+        document.getElementById(`card${counter}`).querySelector('img').alt = item["image"]["alt"]
+        document.getElementById(`card${counter}`).querySelector('h5').innerHTML = `£ ${item["price"]}`
+      }
+      // end of if statement
+    });
+    // end of input from json data into recommendation cards
+    // make first dummy recommendation card 'dissapear'
+    document.getElementById('row').querySelector('div').style = "display: none"
+    // end
+  </script>
+</body>
+</html>
